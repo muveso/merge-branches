@@ -26,7 +26,7 @@ runs:
         echo "Merge $FROM_BRANCH and push to $TO_BRANCH"
         git config user.name github-actions
         git config user.email github-actions@github.com
-        git merge --no-ff $FROM_BRANCH -m "Auto-merge $FROM_BRANCH to $TO_BRANCH"
+        git merge --no-ff $FROM_BRANCH -m "[Automated] Merge $FROM_BRANCH to $TO_BRANCH"
         git push
       env:
         GITHUB_TOKEN: ${{ inputs.token }}
